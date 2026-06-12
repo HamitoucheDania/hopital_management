@@ -1,206 +1,317 @@
-###HospitCare - GestionHospitalière
-
-###Description du projet
-Le projet **HospitCare Gestion Hospitalière** est un site web permettant la gestion administrative d’un établissement hospitalier : patients, personnel, actes médicaux, séjours, traitements, factures, consultations et authentification.  
-Ce projet a été réalisé dans le cadre de la *SAE / Base de Données*.
-
-URL : https://gestion-hospitaliere.alwaysdata.net
-
-###Technologies utilisées
-- **HTML5 / CSS3 / JavaScript**
-- **PHP 8**
-- **PostgreSQL**
-- **phpDocumentor**
-- **AlwaysData** (hébergement)
-
-###Structure du projet
-/css  
- clair.css  
- sombre.css  
+## \# Hopital management 
+### \# Système de Gestion Hospitalière
 
-/include  
- footer.inc.php  
- header.inc.php  
+##### Contenu global du fichier : 
+#### \# Hopital_management
 
-/js  
- backtotop.js  
- script.js  
- theme.js  
+###### | Fichier                 | Description                                                     |
+###### |-------------------------|-----------------------------------------------------------------|
+###### | `Hospital_server`       | Serveur principal PYTHON                                        |
+###### | `Hopital_client`        | Client JAVA                                                     |
+###### | `DDL.sql`+ `DML.sql`    | Requêtes SQL de création et d'insertion dans la base de données |
+###### | `DML.sql`               | Requêtes SQL de sélection de la base de données                 |
+###### | `site_web(code)`        | Tout le code du site web                                        |
 
-/pictures  
- index1.png  
- index2.png  
- index3.png  
- logo.png  
 
-/secret  
- .htaccess  
- database.php  
+##### \## Type de projet
 
-/doc  
- Documentation HTML générée par phpDocumentor  
- index.html  
- fichiers internes de documentation
+###### Projet scolaire - projet BD \& réseau
 
-/.phpdoc  
- Fichier de configuration généré automatiquement pour phpDocumentor
+##### 
 
-/racine (fichiers PHP principaux)  
- actes.php  
- activation.php  
- admin_accueil.php  
- admin_facturation.php  
- ajouter_acte.php  
- ajouter_patient.php  
- ajouter_sejour.php  
- ajouter_traitement.php  
- connexion.php  
- contact.php  
- dashboard_patient.php  
- dashboard_personnel.php  
- deconnexion.php  
- factures.php  
- index.php  
- inscription.php  
- inscription_personnel.php  
- patient_actes.php  
- patient_factures.php  
- patient_fiche.php  
- patient_passages.php  
- patient_sejours.php  
- patient_traitements.php  
- patients_historique.php  
- patients.php  
- pointer_depart.php  
- quissommesnous.php  
- sejours.php  
- traitements.php  
+##### \### Équipe de Développement
 
-###Installation et configuration
+\- \*\*CHEMIM Massiva\*\*
 
-###Cloner le projet
+\- \*\*MOUSSAOUI Imane\*\*
 
-git clone <url-du-projet>
-cd gestion-hospitaliere
+\- \*\*HAMITOUCHE Dania\*\*
 
-###Configurer la base de données
-Modifier le fichier /secret/database.php :
+##### 
 
-$host = "postgresql-gestion-hospitaliere.alwaysdata.net";
-$dbname = "gestion-hospitaliere_db";
-$user = "gestion-hospitaliere";
-$pass = "votre_mot_de_passe";
+##### \## Aperçu du Projet
 
-###Importer la base PostgreSQL
+##### 
 
-psql -h postgresql-gestion-hospitaliere.alwaysdata.net -U gestion-hospitaliere gestion-hospitaliere_db
+###### Le Système de Gestion Hospitalière est une application de gestion destinée à faciliter le suivi et la gestion des patients, des séjours hospitaliers, ainsi que des opérations administratives et de facturation. Il permet une gestion complète et sécurisée des informations médicales et administratives au sein d’un établissement hospitalier.
 
+##### 
 
-###Fonctionnalités principales
+##### \## Fonctionnalités Principales
 
-###Gestion des patients
+##### 
 
-Ajouter / modifier / supprimer un patient
+##### \### Gestion des Patients
 
-Consultation de la fiche patient
+###### \- Création et enregistrement de nouveaux patients
 
-Historique : actes, séjours, traitements, passages, factures
+###### \- Vérification du Numéro de Sécurité Sociale (NSS) au format 15 chiffres
 
-Recherche par NSS
+###### \- Consultation du dossier patient complet
 
+###### \- Gestion des droits et de la carte vitale
 
-###Gestion du personnel
+##### 
 
-Inscription du personnel
+##### \### Suivi Médical
 
-Connexion / gestion de compte
+###### \- Gestion des séjours hospitaliers
 
-Gestion des rôles : médecin, infirmier, agent administratif
+###### \- Historique des actes médicaux par patient et par séjour
 
+###### \- Suivi des traitements en cours
 
-###Gestion administrative
+###### \- Coordination du personnel médical
 
-Gestion des actes médicaux
+##### 
 
-Gestion des traitements
+##### \### Administration et Facturation
 
-Gestion des séjours
+###### \- Gestion des factures et statuts de paiement
 
-Gestion des factures
+###### \- Calcul du chiffre d'affaires par service
 
-Gestion des passages
+###### \- Suivi des admissions quotidiennes
 
+###### \- Gestion de la carte vitale (renouvellements, expiration)
 
-###Consultations et services
+##### 
 
-Suivi du parcours patient
+##### \## Objectifs
 
-Visualisation des informations médicales
+###### \- \*\*Interface client riche en Java\*\* avec reconnexion automatique
 
-Gestion des décisions du personnel médical
+###### \- \*\*Serveur Python robuste\*\* avec gestion multi-clients
 
+###### \- \*\*Base de données PostgreSQL sécurisée\*\*
 
-###Authentification et sécurité
+###### \- \*\*Protocole JSON personnalisé\*\* pour les communications
 
-Connexion et déconnexion sécurisées
+##### 
 
-Gestion de session PHP
+##### \## Stack Technologique
 
-Protection via .htaccess
+###### \- \*\*Client\*\* : Java 11+, Interface Console, Bibliothèque JSON
 
-Accès différenciés :
+###### \- \*\*Serveur\*\* : Python 3.8+, Socket TCP, Multi-threading
 
-Patient
+###### \- \*\*Base de données\*\* : PostgreSQL 12+
 
-Personnel
+###### \- \*\*Protocole\*\* : JSON personnalisé over TCP
 
-Administrateur
 
+##### 
 
-###Interface et thèmes
-Le site propose deux thèmes CSS :
+##### \## Composants Principaux
 
-clair.css
+##### 
 
-sombre.css
+##### \### Client Java (HospitalClient.java)
 
-Le changement de thème est géré via theme.js.
-Le script backtotop.js améliore l’ergonomie de navigation.
+###### \- Gestion des connexions réseau avec timeouts
 
+###### \- Reconnexion automatique avec backoff exponentiel
 
-###Documentation
-La documentation du code a été générée automatiquement avec phpDocumentor.
+###### \- Validation des requêtes avant envoi
 
-Commande utilisée :
+###### \- Logging détaillé
 
-php phpDocumentor.phar -d . -t doc
+##### 
 
+##### \### Serveur Python (server.py)
 
-La documentation est disponible dans :
+###### \- Gestion des connexions simultanées
 
-/doc/index.html
+###### \- Validation stricte du protocole
 
+###### \- Timeouts et gestion d'erreurs
 
-###Tests et validation
+##### 
 
-Validation HTML et CSS
+##### \### Base de Données (database.py)
 
-Vérification de la syntaxe PHP
+###### \- Requêtes paramétrées pour la sécurité
 
-Test des formulaires : connexion, inscription, ajout patient, ajout acte…
+###### \- Gestion des transactions
 
-Vérification de l’accès aux tableaux de bord selon les rôles utilisateurs
+##### 
 
+##### \## Structure des Fichiers
 
-###Auteurs
-Projet développé dans le cadre de la matière SAE / Base de Données.
-Développé par :
+##### 
 
-MOUSSAOUI Imane
+##### \### Côté Client (Java)
 
-HAMITOUCHE Dania
+###### | Fichier                 | Description                                      |
 
-CHEMIM Massiva
+###### |-------------------------|--------------------------------------------------|
 
-###Licence
-Projet académique 2025/2026 — diffusion limitée.
+###### | `HospitalClient.java`    | Client principal avec gestion réseau avancée     |
+
+###### | `HospitalService.java`   | Couche métier pour les requêtes hospitalières    |
+
+###### | `UIConsole.java`         | Interface utilisateur en ligne de commande       |
+
+###### | `ResponseHandler.java`   | Traitement et affichage des réponses serveur     |
+
+##### 
+
+##### \### Côté Serveur (Python)
+
+###### | Fichier                 | Description                                      |
+
+###### |-------------------------|--------------------------------------------------|
+
+###### | `server.py`             | Serveur TCP principal                            |
+
+###### | `actions.py`            | Gestionnaire de toutes les actions métier        |
+
+###### | `database.py`           | Abstraction d'accès à la base de données         |
+
+###### | `config.py`             | Configuration centralisée du système             |
+
+###### | `logs.py`               | Système de logging unifié                        |
+
+###### | `main.py`               | Point d'entrée du serveur                        |
+
+##### \### Site web (php) 
+
+###### | Fichier                     | Description                                 |
+###### | --------------------------- | ------------------------------------------- |
+###### | `css/clair.css`             | Feuille de style thème clair                |
+###### | `css/sombre.css`            | Feuille de style thème sombre               |
+###### | `include/footer.inc.php`    | Footer commun du site                       |
+###### | `include/header.inc.php`    | Header commun du site                       |
+###### | `js/backtotop.js`           | Script pour bouton retour en haut           |
+###### | `js/script.js`              | Scripts JS généraux                         |
+###### | `js/theme.js`               | Gestion du changement de thème clair/sombre |
+###### | `secret/database.php`       | Configuration de la base de données         |
+###### | `actes.php`                 | Gestion des actes médicaux                  |
+###### | `activation.php`            | Activation d’un compte utilisateur          |
+###### | `admin_accueil.php`         | Tableau de bord de l’administrateur         |
+###### | `admin_facturation.php`     | Gestion de la facturation                   |
+###### | `ajouter_acte.php`          | Formulaire d’ajout d’un acte                |
+###### | `ajouter_patient.php`       | Formulaire d’ajout d’un patient             |
+###### | `ajouter_sejour.php`        | Formulaire d’ajout d’un séjour              |
+###### | `ajouter_traitement.php`    | Formulaire d’ajout d’un traitement          |
+###### | `connexion.php`             | Page de connexion                           |
+###### | `deconnexion.php`           | Page de déconnexion                         |
+###### | `inscription.php`           | Page d’inscription patient                  |
+###### | `inscription_personnel.php` | Page d’inscription personnel                |
+###### | `dashboard_patient.php`     | Tableau de bord du patient                  |
+###### | `dashboard_personnel.php`   | Tableau de bord du personnel                |
+###### | `factures.php`              | Gestion des factures                        |
+###### | `patient_actes.php`         | Consultation des actes d’un patient         |
+###### | `patient_factures.php`      | Consultation des factures d’un patient      |
+###### | `patient_fiche.php`         | Fiche médicale d’un patient                 |
+###### | `patient_passages.php`      | Historique des passages du patient          |
+###### | `patient_sejours.php`       | Historique des séjours                      |
+###### | `patients_historique.php`   | Historique complet des patients             |
+###### | `patients.php`              | Liste des patients                          |
+###### | `patients_presents.php`     | Liste des patients présents                 |
+###### | `patient_traitements.php`   | Consultation des traitements d’un patient   |
+###### | `pointer_depart.php`        | Gestion des départs des patients            |
+###### | `quisommesnous.php`         | Page “Qui sommes-nous ?”                    |
+###### | `sejours.php`               | Gestion des séjours                         |
+###### | `traitements.php`           | Gestion des traitements                     |
+###### | `composer.json`             | Fichier de configuration Composer           |
+###### | `composer.lock`             | Fichier lock des dépendances Composer       |
+
+
+##### \## Configuration
+
+##### 
+
+##### \### Configuration Serveur (config.py)
+
+Exemple de configuration:
+
+```python
+
+DEFAULTS = {
+
+&nbsp;   "HOST": "127.0.0.1",
+
+&nbsp;   "PORT": 5000,
+
+&nbsp;   "DB\_HOST": "postgresql-gestion-hospitaliere.alwaysdata.net",
+
+&nbsp;   "DB\_USER": "gestion-hospitaliere",
+
+&nbsp;   "DB\_PASSWORD": "SaeBD25",
+
+&nbsp;   # ... autres paramètres
+
+}
+
+
+
+##### \###Lancer le Serveur avec Configuration Par Défaut
+
+python main.py
+
+
+##### \###Lancer le Serveur avec Paramètres Personnalisés
+
+python main.py  192.168.1.10 7100 (exemple)
+
+
+##### \###Démarrage du Client
+
+###### \###Configuration Par Défaut (localhost:5000)
+
+javac -cp ".;..\\json.jar" \*.java
+
+java -cp ".;..\\json.jar" UIConsole
+
+###### 
+
+###### \###Avec Serveur Personnalisé
+
+java -cp ".;..\\json.jar" UIConsole 192.168.1.10 7100
+
+
+#### \## Licence
+
+##### 
+
+##### \### Conditions d'Utilisation
+
+
+
+\*\*Type\*\* : Projet Scolaire
+
+
+
+\*\*Droits\*\* :
+
+\- Utilisation à des fins éducatives
+
+\- Modification pour l'apprentissage
+
+\- Distribution dans un contexte académique
+
+
+
+\*\*Restrictions\*\* :
+
+\- Utilisation commerciale sans autorisation
+
+\- Modification de la paternité du code
+
+\- Distribution sans mention des auteurs originaux
+
+##### 
+
+##### \### Mentions Légales
+
+Ce logiciel est fourni "tel quel", sans garantie d'aucune sorte. Les auteurs ne peuvent être tenus responsables des dommages résultant de son utilisation. Destiné exclusivement à un usage éducatif et d'apprentissage.
+
+
+##### \### Support et Contact
+
+Pour toute question concernant ce projet scolaire, contacter les auteurs via les canaux académiques appropriés.
+
+
+\*\*Documentation technique - Version 1.0 - Novembre 2025\*\*
+
